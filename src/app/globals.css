@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-gray-800;
+  }
+  
+  body {
+    @apply bg-dark-200 text-gray-100;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-dark-300;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-700 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-600;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-neon-green text-dark-300 font-bold rounded-lg hover:bg-neon-green/90 transition-all duration-200 shadow-lg hover:shadow-neon-green/50;
+  }
+  
+  .btn-secondary {
+    @apply px-4 py-2 bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-600 transition-all duration-200;
+  }
+  
+  .btn-danger {
+    @apply px-4 py-2 bg-neon-red text-white font-bold rounded-lg hover:bg-neon-red/90 transition-all duration-200;
+  }
+  
+  .card {
+    @apply bg-dark-100 border border-gray-800 rounded-xl p-6 shadow-xl;
+  }
+  
+  .input {
+    @apply w-full px-4 py-3 bg-dark-300 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-neon-green focus:border-transparent transition-all;
+  }
+  
+  .badge-critical {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-red-900/50 text-red-400 border border-red-500;
+  }
+  
+  .badge-high {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-orange-900/50 text-orange-400 border border-orange-500;
+  }
+  
+  .badge-medium {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-yellow-900/50 text-yellow-400 border border-yellow-500;
+  }
+  
+  .badge-low {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-blue-900/50 text-blue-400 border border-blue-500;
+  }
+  
+  .terminal {
+    @apply bg-black rounded-lg p-4 font-mono text-sm overflow-auto max-h-96;
+  }
+  
+  .glow-text {
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+  }
+  
+  .animate-scan {
+    animation: scan 2s ease-in-out infinite;
+  }
+  
+  @keyframes scan {
+    0%, 100% {
+      opacity: 0.5;
+      transform: translateY(0);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(-10px);
+    }
+  }
+}
+
+@layer utilities {
+  .text-shadow-glow {
+    text-shadow: 0 0 10px currentColor;
+  }
+}
